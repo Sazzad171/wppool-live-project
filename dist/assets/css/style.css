@@ -82,6 +82,9 @@ a:hover {
   text-decoration: none;
   color: #3A424A; }
 
+.btn:hover {
+  box-shadow: 0 2px 11px 0 #3a424a2e; }
+
 .btn:focus {
   box-shadow: none; }
 
@@ -134,10 +137,13 @@ a:hover {
     letter-spacing: 1px;
     margin-right: 1.5rem;
     padding: .5rem .8rem; }
-  .navbar-full .right-part i {
-    color: #4B5660;
-    font-size: 26px;
+  .navbar-full .right-part .icon-menu-cus {
     cursor: pointer; }
+    .navbar-full .right-part .icon-menu-cus .single-nav-icon {
+      width: 26px;
+      height: 3px;
+      background-color: #4B5660;
+      margin: 6px 0; }
 
 .hero {
   padding-bottom: 85px; }
@@ -722,6 +728,18 @@ a:hover {
   position: relative;
   overflow: hidden; }
 
+.full-body-overlay {
+  background: #27272752;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  display: none; }
+
 .side-nav {
   position: absolute;
   padding: 5px 0 65px 38px;
@@ -733,15 +751,24 @@ a:hover {
   background: #8599AA;
   overflow-y: scroll;
   z-index: 100; }
-  .side-nav .cross-icon {
+  .side-nav .close-icn {
     position: absolute;
-    right: 40px;
-    top: 30px;
-    z-index: 20;
-    cursor: pointer; }
-    .side-nav .cross-icon i {
-      font-size: 22px;
-      color: #4B5660; }
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    z-index: 20; }
+  .side-nav .close-icn:before, .side-nav .close-icn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 31px;
+    width: 3px;
+    background-color: #4B5660; }
+  .side-nav .close-icn:before {
+    transform: rotate(45deg); }
+  .side-nav .close-icn:after {
+    transform: rotate(-45deg); }
   .side-nav .logo {
     padding: 1.5rem 5px 1.8rem;
     position: relative;
@@ -859,8 +886,8 @@ a:hover {
     font-size: 5rem; }
   .hero .small-heading {
     right: 0; }
-  .hero .small-heading h5 {
-    font-size: 14px; }
+    .hero .small-heading h5 {
+      font-size: 14px; }
   .hero .carousel-indicators {
     left: -6px; }
   .hero .left-digit {
@@ -905,6 +932,9 @@ a:hover {
   .hello-full .right-img .flower,
   .hello-full .right-img .big-polygon {
     display: none; }
+  .hello-full .text {
+    padding: 70px 30px;
+    text-align: center; }
   .few-words .container {
     text-align: center; }
   .few-words .img-part img {

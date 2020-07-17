@@ -29,7 +29,11 @@
           <div class="col-8">
             <div class="float-right right-part">
               <button class="btn montserrat">FREE WEDDING PLANNING GUIDE</button> 
-              <i class="icon-menu" onclick="showNav()"></i>
+              <div class="icon-menu-cus" onclick="showNav()">
+                <div class="single-nav-icon"></div>
+                <div class="single-nav-icon"></div>
+                <div class="single-nav-icon"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -345,9 +349,10 @@
     </section>
     <!-- footer end -->
     <!-- nav start -->
+    <div class="full-body-overlay" id="fullBodyOverlay" onclick="hideOverlay()"></div>
     <section class="side-nav" id="sideNav">
-      <div class="cross-icon">
-        <i class="icon-cancel" onclick="hideNav()"></i>
+      <div>
+        <a href="#" class="close-icn" onclick="hideNav()"></a>
       </div>
       <div class="logo">
         <span class="alFresco-normal n-bg">N</span>
